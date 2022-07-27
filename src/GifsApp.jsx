@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 export const GifsApp = () => {
   const apiKey = "cv8V5riGJxpNnkhGzKz86NcOX8HwNdeg";
@@ -18,11 +19,10 @@ export const GifsApp = () => {
       <h1>Gifs App</h1>
       <AddCategory onAddCategory={onAddCat} />
       <button onClick={onAddCat}>Agregar</button>
-      <ol>
-        {categories.map((c) => (
-          <li key={c}>{c}</li>
-        ))}
-      </ol>
+
+      {categories.map((c) => (
+        <GifGrid key={c} cat={c} />
+      ))}
     </>
   );
 };
