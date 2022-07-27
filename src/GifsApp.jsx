@@ -6,14 +6,14 @@ export const GifsApp = () => {
 
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
 
-  const onAddCat = () => {
-    setCategories(["Mob 100", ...categories]);
+  const onAddCat = (cat) => {
+    setCategories([cat, ...categories]);
   };
 
   return (
     <>
       <h1>Gifs App</h1>
-      <AddCategory />
+      <AddCategory onAddCategory={onAddCat} />
       <button onClick={onAddCat}>Agregar</button>
       <ol>
         {categories.map((c) => (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ onAddCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const changeHandler = (ev) => {
@@ -9,7 +9,11 @@ export const AddCategory = () => {
 
   const submitHandler = (ev) => {
     ev.preventDefault();
-    console.log(inputValue);
+    if (inputValue.trim().length < 1) {
+      return;
+    }
+    onAddCategory(inputValue);
+    setInputValue("");
   };
 
   return (
