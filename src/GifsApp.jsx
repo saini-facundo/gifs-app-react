@@ -7,6 +7,9 @@ export const GifsApp = () => {
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
 
   const onAddCat = (cat) => {
+    if (categories.includes(cat)) {
+      return;
+    }
     setCategories([cat, ...categories]);
   };
 
