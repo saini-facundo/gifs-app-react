@@ -3,7 +3,6 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifsApp = () => {
-  const apiKey = "cv8V5riGJxpNnkhGzKz86NcOX8HwNdeg";
 
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
 
