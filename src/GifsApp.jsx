@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
 
 export const GifsApp = () => {
   const apiKey = "cv8V5riGJxpNnkhGzKz86NcOX8HwNdeg";
@@ -9,10 +10,10 @@ export const GifsApp = () => {
     setCategories(["Mob 100", ...categories]);
   };
 
-  console.log("categories = ", categories);
   return (
     <>
       <h1>Gifs App</h1>
+      <AddCategory />
       <button onClick={onAddCat}>Agregar</button>
       <ol>
         {categories.map((c) => (
