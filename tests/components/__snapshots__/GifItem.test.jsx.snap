@@ -7,7 +7,7 @@ exports[`Pruebas en GiftItem debe hacer match con el snapshot 1`] = `
   >
     <img
       alt="title"
-      src="Url"
+      src="https://imgs.com/img.jpg"
     />
     <p>
       title
