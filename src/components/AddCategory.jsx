@@ -18,7 +18,7 @@ export const AddCategory = ({ onAddCategory }) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} aria-label="form">
       <input
         type="text"
         placeholder="Buscar GIFs"
